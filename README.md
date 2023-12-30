@@ -1,10 +1,17 @@
 <h1 align="left">Копирование логов Marzban-node и backup Marzban </h1>
 <p align="left">Эти скрипты нужны для сбора логов с нод Marzban и выполнения бэкапа с помощью TG.</p>
-
+<p align="left">Перед установкой убедитесь, что у вас включено логирование для нод и мэйн сервера.</p>
 ###
-
-
-
+docker-compose.yml на мейн сервере
+```bash
+volumes:
+   - /var/lib/marzban/logs:/var/lib/marzban-node
+```
+xray конфигурация на мейн сервере
+```bash
+"access": "/var/lib/marzban-node/access.log",
+    "error": "/var/lib/marzban-node/error.log"
+```
 ###
 
 <h1 align="left">Как это работает</h1>
