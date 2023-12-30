@@ -2,12 +2,12 @@
 <p align="left">Эти скрипты нужны для сбора логов с нод Marzban и выполнения бэкапа с помощью TG.</p>
 <p align="left">Перед установкой убедитесь, что у вас включено логирование для нод и мэйн сервера.</p>
 ###
-docker-compose.yml на мейн сервере
+<p align="left">docker-compose.yml на мейн сервере</p>
 ```bash
 volumes:
    - /var/lib/marzban/logs:/var/lib/marzban-node
 ```
-xray конфигурация на мейн сервере
+<p align="left">xray конфигурация на мейн сервере</p>
 ```bash
 "access": "/var/lib/marzban-node/access.log",
     "error": "/var/lib/marzban-node/error.log"
