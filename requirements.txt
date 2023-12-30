@@ -1,0 +1,4 @@
+docker
+aiogram==2.0
+schedule
+paramiko
