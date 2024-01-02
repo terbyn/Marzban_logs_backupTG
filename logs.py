@@ -26,8 +26,8 @@ def copy_and_delete_file(ssh, server_name, remote_file_path, local_dir):
     stdin, stdout, stderr = ssh.exec_command(f'cat {remote_file_path}')
     file_contents = stdout.read()
     
-    # Дозапись в локальный файл
-    with open(local_file_path, 'ab') as local_file:
+    # Очистка и запись в локальный файл
+    with open(local_file_path, 'wb') as local_file:
         local_file.write(file_contents)
 
     # Удаляем все строки кроме последних 5
